@@ -1,0 +1,126 @@
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+	
+	body {
+	  font-family: Arial;
+	  padding: 10px;
+	  background: #f1f1f1;
+	}
+	
+	/* Header/Blog Title */
+	.header {
+	  padding: 30px;
+	  text-align: center;
+	  background: white;
+	}
+	
+	.header h1 {
+	  font-size: 50px;
+	}
+	
+	/* Style the top navigation bar */
+	.topnav {
+	  overflow: hidden;
+	  background-color: rgb(66, 53, 243);
+	}
+	
+	/* Style the topnav links */
+	.topnav a {
+	  float: left;
+	  display: block;
+	  color: #f2f2f2;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+	
+	/* Change color on hover */
+	.topnav a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+	
+	/* Create two unequal columns that floats next to each other */
+	/* Left column */
+	.leftcolumn {   
+	  float: left;
+	  width: 75%;
+	}
+	
+	/* Right column */
+	.rightcolumn {
+	  float: left;
+	  width: 25%;
+	  background-color: #f1f1f1;
+	  padding-left: 20px;
+	}
+	
+	/* Fake image */
+	.fakeimg {
+	  background-color: paleturquoise;
+	  width: 100%;
+	  padding: 20px;
+	}
+	
+	/* Add a card effect for articles */
+	.card {
+	  background-color: orange;
+	  padding: 20px;
+	  margin-top: 20px;
+	}
+	
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	/* Footer */
+	.footer {
+	padding: 20px;
+	text-align: center;
+	background: orange;
+	margin-top: 20px;
+  }
+	
+	/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 800px) {
+	  .leftcolumn, .rightcolumn {   
+		width: 100%;
+		padding: 0;
+	  }
+	}
+	
+	/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+	@media screen and (max-width: 400px) {
+	  .topnav a {
+		float: none;
+		width: 100%;
+	  }
+	}
+	</style>
+	
+	  <div class="header">
+		  <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACeCAMAAACcjZZYAAABlVBMVEUAAAD/mQD/////nwD/nQAdEQAuHAD6lgAfEwD2lAALBgD/mwCtra3F3e3q1rqURwDejwDy8vL///iEoMheRiWbhVy4bgC2trbn5+fFxcVNLgBeOAD9kABwQACBXwAkBQBAY5EAABXl/f9QUFCveQBTHQCff13YtZ2JVRh+nrMOAAC60+mSVwDoiwAAFgDMawAAAAsxMTHUegBiUwCjdQAAHwAAABvYhAAAC1IAACDa2tpWNACmYwB/jZxWQSyJnKuRf2hGWnKyraM1JwzjgQAAFynKjQBtLgBSbIXm8vw5TGBGPwCgtMXslgCpVAAvUn0ALQCPcVN3k7UjLQAfIyYnJB9iSQBnIgB9bl4THShjf6Cjl3o/Mip2XgA/FADNfQA7JwB2SwAfIACXYgArBgDGYAC7ZQD58OJOJx6BNgBmLgAXKACzln0AJUyXt9JiWVNRWGFNFgCHRwAJNFVJZYgAEjs4AwArAADChAAYNQBSKQwAKl9EOQBAFgChx9V/VDcUSGkAGQDr4NEAP1gtEgBjbHVvaGBWB0oZAAAH30lEQVR4nO2d+XsTRRiAk+5ASRY0rVisDSiXF0mFNqWWtrZAQVpAORQFLFeRCFRBVMCTcujf7SbZuWc3ab6dGQzf+wNPOjsz6bzPzLdz7JZcDkEQBEEQBEEQBEEQBEEQBEEQBEEQBEmjuMkuvttnlUq1YJvJiu9G2mKkQMK8bUJSmPbdUCuMEOvuWgLDXvS3oeDGXuSv4LutFphx1PkiSA/GP2edL6Lqu7HZEzjU11/03dqs2eBSX36j7+ZmDeoDgfpAoD4QqA8E6gOB+kCgPhCoDwTqA4H6QKA+EKgPBOoDgfpAoD4QqA8E6gOB+kCgPhCSvlBGa3276070zW5uz6dt6pijGedpymGacuToen4ZUV+4MCShngCr19d/xpmFvi197XkvvYqdu2jG12jSG6zsVi37sWSjoj7yunztuKrvM/l6qRf1DWr6Tiy+mVhTmr4dyvAsvyNffyX0LUXf152+k/LoDReUsq+AvqlTjbTu9I2eltpOPlfK9r6+2VZad/pye6TRG+xVLve6vsOLfSB9O6TRW/5Iudzj+r5g1XWp74w0KfxYLetb30ASg2fTqzDoO0drqzN970L1SYLSr/rQd6fbKgz6DMD1ScFPDX3e9W3vtgpX+saF4FfWyqK+NvrOc3166Pt/6dv/5YEDX8Wfbeu78HX8oaRfrLC1h64vJI13HFr/vkz6js0ODzRvNsPfNH406Lu4m1KkP15iX3S5eeFbQ8Vmfcv0U417uBInXU3UR/Jjle0bI65dn5kMTY+c+9F37FQfpz7fyZbBh306pp6aoI+OVLZuYyu2CT79k/WRckVcE99YKegCveg7oWq4uT9F32AG+sbpfaJIL5Pv2CWzvvCWWvVoTfPnQ59uov69bX2EDtXH8eglt+OEmlFfmFc2s5pcUP150HfOIKKuK8lWX0A/sk2rR3FCydz7zFPY88pRgPtp8yWDB5OSjPXRoRgHPxb67gZGfaa+JxS3o2/gLTOrPPMP6fas6WPBr7VpxTarxoMFXZ+2lcWRdx3cbBm8zzP/KCTXj9zbfX9uUcpqR1/U6J/ij63gR2j3qpGyNnER91GvDVULhbEHPKHkU9/PQirtk1IwtLPjsoMQamC52X3KNPQdD3V9hA/dWtCwHQYLN2mKuO5zrk/oRHwP65cO9XW/6oj00ZlfM/rzWV+Q1/QJna9GawvLN5VcXvRtMaSJU2Rr+riTkhT6iK6PFxNuFEy/dODkWB8fu/WHQg2/8vhnS18+pF/Y2LQKaCSMFnH64KUDm00Sm9AiwraDa30n9KQm/IZiTV9A58mN4Mc2q0p5TZ8wdsVZHqusWPKmj49SefuZTwat6WOrtDMh36y6G+j6WMbcb5I+liz0yWz1DScwT7P+zZz8LlXxh319vFMd5xcat1FNH5v0jQeEE7DgV7Olr+2qYx/NWf9LSm+/ZdAApC9fpsEvav5e/lEfvEkrDsoysaSv7ZqX63skpbvQxzYJTgZi6NNvHdoZiMK4f33qgmHRgT4avCbYOJwg3eg7aWvwdq7vmXxEvd+BPmHmJ4a+9ev7078+Jfa56H35PA1+K3Tzr3kTWLe+uy+dPhexj8/85C2WZH2b3jbib/AmTVwOutDHZ24xNwKTvvA2KxUYsbbqaKuPry6eSOl8L8WiPu15vtaSNmXe1/bvOTnWx1cXq1I637NK08dXzN3FvvJDOW9r/pu86ngqbc2bHh13rG9N16RUkabvE6A+NvOLaenSBm9ZyRAzNlkIo9WHZNH1URHfWhFHLx+7dvXJwe9paNQn7LgI64uG1OKma9dXhib7belrf1TEg58w8zsobDrY0dcapqH8VBA9dqQ7Ufp+X67EulogJNrSN7wtkZFW3jWDqIP7+gypqfrk7S4Rsz76YJo0WadLfzZR0XebR0uxYsLTxp3v90V8EGcWVD1rvSuzJJVP0ze1i6XN53L35+TbT4tUfXLwe5ygTzzrGN0TRNGOBGO8mPh2iHN9a2LiwLbN2+SDtlR9fHId+zf8Mun6xAcv2H1V0yfNcG5UhoZmhFnqsvujIkGfdFJpIPXRcOWb6sprLQ1S9Ule2EGGpi/tnFd+ucG9PnH4ci7v6kSfctg7KO96NUmPfeUrPCfb9dT1CSsPFen4w4e+KUP+1ef0U6q+NaWYYXGfrk+IajyGGfQlPqWxx+ZDGh3py01p/W81t9SRPnXkyyu/Jm308VE5wd6fNOrLm8bv08fKMs6HPnUQ1s/mOtW3UzZvmP6l6xOCHz/DVed9ceEFbRZ7vaCu27LQty/xdQ6OsiBZ4o+X1i83bgDPF+OMbEZ3jhatbxVLzgp36meGt4QlfbemR5pM84h1ZyRO4u8oPKBJ8itvIVl48IJXfHTltJ2nS7vi4j+bhw8dGj5yb90l7zcKRiX/fWG6Kr9NTo/JeK8hehLLpcoJSVi9OlOJmLlatfZs80tF1n/LIFRlo77sQH2oTwT1gUB9IFAfCNQHAvWBQH0gUB8I1AcC9YFAfSBQHwjUBwL1gUB9IFAfCNQHAvWBQH0gUB8I1AcC9YFAfSBQHwjUBwL1gUB9IFAfDJf6+ou+W5s5VYf6qr4bmz0zbd8izQxS8d3Y7Nmw/v8yp0vCgu+22mDEUfcLybTvplphupD0LG2m8qq9aS+iMtlvm8kejHsCRbv4bh6CIAiCIAiCIAiCIAiCIAjyKvIfA/wxc9NheS4AAAAASUVORK5CYII=" width="20%"></h1>
+  
+		</div>
+		
+		<div class="topnav">
+		  <a href="http://localhost:8080/login?username=&password=">Login</a>
+	      <a href="http://localhost:8080/staffs">Staffs</a>
+	      <a href="http://localhost:8080/order">Order</a>
+	      <a href="http://localhost:8080/payment?dssp=">Payment</a>
+		  <a href="http://localhost:8080/products">Products</a>
+		  <a href="http://localhost:8080/" style="float:right">Home</a>
+		</div>
+  
+  
+  </head>
+  
+  <div class="alert alert-primary" role="alert">
+	
+  </div>
+
